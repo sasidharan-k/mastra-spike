@@ -15,8 +15,8 @@ const BING_SEARCH_URL = 'https://api.bing.microsoft.com/v7.0/search';
 const BING_SEARCH_API_KEY = process.env.BING_API_KEY || '';
 
 export const bindSearchTool = createTool({
-  id: 'get-weather',
-  description: 'Get current weather for a location',
+  id: 'bing-search',
+  description: 'The search term to be used to search engine on www.in.gov website.',
   inputSchema: z.object({
     searchTerm: z.string().describe('The search term to be used to search engine on www.in.gov website.'),
   }),
@@ -65,12 +65,3 @@ export class BingError extends Error {
     this.name = 'BingError';
   }
 }
-
-const getBingResults = (result: any) => {
-    const pages = result.webPages?.value || [];
-    return pages
-      .map((page: WebPage) => {
-        return `Results for: ${page.url} \n ${page.fullPageContent}`;
-      })
-      .join(' \n ');
-  }
