@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mastra dev",
     "build": "mastra build",
-    "start": "cd .mastra/output; node index.mjs"
+    "start": "cd .mastra/output; node index.mjs",
+    "deploy": "mastra deploy"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -19,6 +20,7 @@
   "dependencies": {
     "@ai-sdk/openai": "^1.2.1",
     "@mastra/core": "^0.6.0",
+    "@mastra/deployer-vercel": "^0.1.9",
     "bufferutil": "^4.0.9",
     "mastra": "^0.3.1",
     "utf-8-validate": "^6.0.5",
