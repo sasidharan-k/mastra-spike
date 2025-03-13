@@ -9,6 +9,9 @@
     "build": "mastra build",
     "start": "cd .mastra/output; node index.mjs"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
