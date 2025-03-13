@@ -18,6 +18,7 @@
     "@mastra/core": "^0.6.0",
     "bufferutil": "^4.0.9",
     "mastra": "^0.3.1",
+    "utf-8-validate": "^6.0.5",
     "zod": "^3.24.2"
   },
   "devDependencies": {
