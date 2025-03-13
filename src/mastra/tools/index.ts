@@ -1,15 +1,5 @@
 import { createTool } from '@mastra/core/tools';
 import { z } from 'zod';
-type WebPage = {
-  id: string;
-  name: string;
-  url: string;
-  displayUrl: string;
-  snippet: string;
-  fullPageContent: string;
-  dateLastCrawled: string;
-};
-
 
 const BING_SEARCH_URL = 'https://api.bing.microsoft.com/v7.0/search';
 const BING_SEARCH_API_KEY = process.env.BING_API_KEY || '';
